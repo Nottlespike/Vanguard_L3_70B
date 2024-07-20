@@ -9,7 +9,7 @@ src="doc_data/vanguard_poster.jpeg"
 
 2. Key Features:
    - Real-time email analysis for security threats
-   - Integration with an OpenAI-compatible API's in this case Llama 3 70b trained on a very small dataset of sythetic about  for advanced threat detection
+   - Integration with an OpenAI-compatible API's in this case Llama 3 70b trained on a small dataset of sythetic for advanced threat detection
    - High level secure interface within Outlook
    - Dynamic light/dark mode support for better accessibility
    - Detailed explanations of security assessments
