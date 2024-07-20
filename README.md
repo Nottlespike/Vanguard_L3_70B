@@ -1,4 +1,8 @@
-Project Summary: Vanguard - AI-Powered Email Security Add-in For Data Sensitive Enterprises
+## Project Summary: Vanguard - AI-Powered Email Security Add-in For Data Sensitive Enterprises
+
+<img
+src="doc_data/vanguard_poster.jpeg"
+  style="display: inline-block; margin: 0 auto; max-width: 50px">
 
 1. Project Overview:
    You've developed "Vanguard," an innovative Outlook add-in that leverages AI to enhance email security. This tool is designed to analyze emails in real-time for potential security threats, providing users with immediate feedback on the safety of their incoming messages.
