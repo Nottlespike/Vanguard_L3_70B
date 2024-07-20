@@ -5,7 +5,7 @@ src="doc_data/vanguard_poster.jpeg"
   style="display: inline-block; margin: 0 auto; max-width: 50px">
 
 1. Project Overview:
-   You've developed "Vanguard," an innovative Outlook add-in that leverages AI to enhance email security. This tool is designed to analyze emails in real-time for potential security threats, providing users with immediate feedback on the safety of their incoming messages.
+   We have developed "Vanguard," an innovative Outlook add-in that leverages AI to enhance email security. This tool is designed to analyze emails in real-time for potential security threats, providing users with immediate feedback on the safety of their incoming messages.
 
 2. Key Features:
    - Real-time email analysis for security threats
