@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OutlookGuard</title>
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+    <!-- For more information on Fluent UI, visit https://developer.microsoft.com/fluentui#/. -->
+    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css"/>
+    <!-- Template styles -->
+    <link href="taskpane.css" rel="stylesheet" type="text/css" />
+    <!-- Axios library -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body class="ms-font-m ms-welcome ms-Fabric">
+    <header class="ms-welcome__header ms-bgColor-neutralLighter">
+        <h1 class="ms-font-su">OutlookGuard</h1>
+    </header>
+    <main id="app-body" class="ms-welcome__main">
+        <h2 class="ms-font-xl">Email Security Analysis</h2>
+        <p class="ms-font-l">Click the button below to analyze the current email:</p>
+        <button id="analyze-email" class="ms-Button ms-Button--hero ms-font-xl">
+            <span class="ms-Button-label">Analyze Email</span>
+        </button>
+        <div id="result" class="ms-font-m result-container"></div>
+    </main>
+    <button id="theme-toggle">Toggle Dark/Light Mode</button>
+    <!-- Add-in JavaScript -->
+    <script type="text/javascript" src="taskpane.js"></script>
+</body>
+</html>

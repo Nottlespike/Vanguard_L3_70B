@@ -1,0 +1,108 @@
+:root {
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --header-background: #f3f3f3;
+    --button-background: #0078d4;
+    --button-text: #ffffff;
+    --button-hover: #106ebe;
+    --result-background: #f0f0f0;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #1e1e1e;
+        --text-color: #ffffff;
+        --header-background: #2d2d2d;
+        --button-background: #0078d4;
+        --button-text: #ffffff;
+        --button-hover: #106ebe;
+        --result-background: #2d2d2d;
+    }
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.ms-welcome__header {
+    background-color: var(--header-background);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ms-welcome__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#analyze-email {
+    background-color: var(--button-background);
+    color: var(--button-text);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#analyze-email:hover,
+#analyze-email:focus {
+    background-color: var(--button-hover);
+}
+
+#result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--result-background);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Ensure text is always visible */
+.ms-welcome__main h2,
+.ms-welcome__main p,
+#result {
+    color: var(--text-color);
+}
+
+/* Additional styles for better visibility */
+.ms-font-xl {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.ms-font-m {
+    font-size: 14px;
+}
+
+body.dark-mode {
+    --background-color: #1e1e1e;
+    --text-color: #ffffff;
+    --header-background: #2d2d2d;
+    --button-background: #0078d4;
+    --button-text: #ffffff;
+    --button-hover: #106ebe;
+    --result-background: #2d2d2d;
+}
+
+#theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: var(--button-background);
+    color: var(--button-text);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
