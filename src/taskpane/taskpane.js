@@ -56,7 +56,7 @@ async function sendToOpenAICompatibleEndpoint(subject, sender, body) {
     const response = await axios.post(
       endpoint,
       {
-        model: "gpt-3.5-turbo",
+        model: "L3Vanguard",
         messages: [
           {
             role: "system",
