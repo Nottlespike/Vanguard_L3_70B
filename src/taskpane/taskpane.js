@@ -68,7 +68,7 @@ async function sendToOpenAICompatibleEndpoint(subject, sender, body) {
             content: `Please analyze this email for potential security threats:\n\nSubject: ${subject}\nFrom: ${sender}\n\nBody:\n${body}`,
           },
         ],
-        temperature: 0.65, // Added temperature parameter
+        temperature: 0.45, // Added temperature parameter
       },
       {
         headers: {
