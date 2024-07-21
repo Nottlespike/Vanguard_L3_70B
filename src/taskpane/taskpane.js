@@ -61,14 +61,14 @@ async function sendToOpenAICompatibleEndpoint(subject, sender, body) {
           {
             role: "system",
             content:
-              "You are an AI assistant that analyzes emails for potential security threats. Respond with a JSON object containing a boolean 'isMalicious' field and a string 'explanation' field that provides a brief explanation of your analysis.",
+              "You are an AI assistant that analyzes emails for potential security threats.  Respond with a JSON object containing a boolean 'isMalicious' field and a string 'explanation' field that provides a brief explanation of your analysis.",
           },
           {
             role: "user",
             content: `Please analyze this email for potential security threats:\n\nSubject: ${subject}\nFrom: ${sender}\n\nBody:\n${body}`,
           },
         ],
-        temperature: 0.45, // Added temperature parameter
+        temperature: 1.25, // Added temperature parameter
       },
       {
         headers: {
