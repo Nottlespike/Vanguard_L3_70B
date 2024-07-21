@@ -68,13 +68,14 @@ async function sendToOpenAICompatibleEndpoint(subject, sender, body) {
             content: `Please analyze this email for potential security threats:\n\nSubject: ${subject}\nFrom: ${sender}\n\nBody:\n${body}`,
           },
         ],
+        temperature: 0.65, // Added temperature parameter
       },
       {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${apiKey}`,
         },
-      }
+      },
     );
 
     const aiResponse = JSON.parse(response.data.choices[0].message.content);
