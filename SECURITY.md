@@ -116,6 +116,11 @@ resultElement.innerHTML = resultHtml;
    - Code review process that includes security checks
    - Automated security scanning in CI/CD pipeline
 
+4. **.gitignore Refinements** (Future Consideration):
+   - Review patterns like `*local*`, `*config.json`, and `*secrets.json` for potential conflicts
+   - Consider more specific patterns like `*.local.*` or `*-config.json` to avoid accidentally ignoring legitimate files
+   - Document which specific files should be ignored vs. tracked
+
 ## Configuration Instructions
 
 1. Copy `.env.example` to `.env`:
