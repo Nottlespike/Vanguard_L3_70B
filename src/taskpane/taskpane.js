@@ -24,7 +24,9 @@ async function analyzeEmail() {
         ? `<p style="color: red;">Warning: This email may be malicious!</p>`
         : `<p style="color: green;">This email appears to be safe.</p>`;
 
-      resultHtml += `<p><strong>Explanation:</strong> ${result.explanation}</p>`;
+      // Sanitize the explanation to prevent XSS attacks
+      const sanitizedExplanation = sanitizeString(result.explanation);
+      resultHtml += `<p><strong>Explanation:</strong> ${sanitizedExplanation}</p>`;
       resultElement.innerHTML = resultHtml;
     }
   } catch (error) {
@@ -49,8 +51,13 @@ function getBodyAsPlainText(item) {
 }
 
 async function sendToOpenAICompatibleEndpoint(subject, sender, body) {
-  const endpoint = "https://aphrodite.ngrok.io/v1/chat/completions";
-  const apiKey = "295a1091a126606dfe47ca8b85539ff2";
+  // TODO: Move these to environment variables or secure configuration
+  const endpoint = process.env.API_ENDPOINT || "";
+  const apiKey = process.env.API_KEY || "";
+
+  if (!endpoint || !apiKey) {
+    throw new Error("API endpoint and key must be configured");
+  }
 
   try {
     const response = await axios.post(

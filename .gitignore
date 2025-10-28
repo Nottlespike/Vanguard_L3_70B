@@ -144,6 +144,8 @@ manifest-*.xml
 # Ignore files that might contain sensitive information
 *config.json
 *secrets.json
+*.zip
+security_material/
 
 # Keep crucial project files
 !package.json
