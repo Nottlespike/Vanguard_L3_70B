@@ -130,9 +130,11 @@ $RECYCLE.BIN/
 # *.js.map
 # *.d.ts
 
-# Ignore all .env files except example.env
-.env*
-!example.env
+# Ignore all .env files except .env.example
+.env
+.env.local
+.env.*.local
+!.env.example
 
 # Ignore manifest-*.xml files, but keep the base manifest.xml
 manifest-*.xml
